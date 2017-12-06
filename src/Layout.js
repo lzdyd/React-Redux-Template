@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid, GridRow, GridColumn, Icon } from 'semantic-ui-react';
+import { Grid, GridRow, GridColumn, Icon, Button } from 'semantic-ui-react';
 
 export default class Layout extends Component {
   constructor(props) {
@@ -20,28 +20,33 @@ export default class Layout extends Component {
 
   render() {
     return (
-      <header className="page-header">
-        <Grid container={ true } columns={ 2 }>
+      <header className={ `page-header ${this.state.menuOpen ? 'menu-opened' : 'menu-closed'}` }>
+        <Grid container={ true } columns={ 3 }>
           <GridRow style={{ paddingBottom: '0' }}>
 
-            <GridColumn mobile={ 10 }>
+            <GridColumn mobile={ 10 } computer={ 2 } style={{ outline: '2px solid red' }}>
               <Icon className="page-header__logo" name='umbrella'/>
             </GridColumn>
 
-            <GridColumn verticalAlign={ 'middle' }>
-              <nav className={ `page-header__nav ${this.state.menuOpen ? 'menu-opened' : 'menu-closed'}` }>
+            <GridColumn verticalAlign={ 'middle' } floated={ 'right' } only={ 'mobile' } className="page-header__menu-col">
+              <div className="page-header__menu-collapse" onClick={ this.toggleMenu }>
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+            </GridColumn>
+
+            <GridColumn mobile={ 10 } computer={ 4 }>
+              <nav className='page-header__nav'>
                 <ul>
                   <li><a href="/users">Users</a></li>
                   <li><a href="/articles">Articles</a></li>
-                  <li className="page-header__menu-collapse" onClick={ this.toggleMenu }>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                  <li>
+                    <Button>Log in</Button>
                   </li>
                 </ul>
               </nav>
             </GridColumn>
-
           </GridRow>
         </Grid>
       </header>
