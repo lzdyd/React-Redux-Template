@@ -1,8 +1,63 @@
+@import './sass/utils/mixins';
+@import './sass/base/colors';
+
 html {
   font-size: 16px;
 }
 
 header.page-header {
-  background-color: #797cff;
+  background-color: $header-color;
   color: #fff;
+
+  .page-header__logo {
+    font-size: 3rem;
+    line-height: 1;
+  }
+
+  .page-header__nav {
+    overflow: hidden;
+
+    ul {
+      @include listRow;
+
+      li.page-header__menu-collapse {
+        &:hover {
+          cursor: pointer;
+        }
+        div {
+          width: 1.5rem;
+          height: 0.125rem;
+          background-color: #fff;
+          margin: 6px 0;
+        }
+      }
+    }
+  }
+
+  .page-header__nav.menu-closed {
+    li:not(:last-of-type) {
+      display: none;
+    }
+
+    li.page-header__menu-collapse {
+      //float: right;
+      //display: block;
+      position: absolute;
+      right: 1rem;
+      top: -1rem;
+      display: block;
+    }
+  }
+
+  .page-header__nav.menu-opened {
+    li:not(:last-of-type) {
+
+    }
+
+    li.page-header__menu-collapse {
+      position: absolute;
+      right: 1rem;
+      top: 0.25rem;
+    }
+  }
 }
