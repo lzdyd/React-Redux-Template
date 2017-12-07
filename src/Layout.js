@@ -21,7 +21,7 @@ export default class Layout extends Component {
   render() {
     return (
       <div className="main-app">
-{/*        <header className={ `page-header ${this.state.menuOpen ? 'menu-opened' : 'menu-closed'}` }>
+        <header className={ `page-header ${this.state.menuOpen ? 'menu-opened' : 'menu-closed'}` }>
           <Grid container={ true } columns={ 3 } style={{ marginBottom: '0' }}>
             <GridRow style={{ paddingBottom: '0' }}>
 
@@ -58,11 +58,7 @@ export default class Layout extends Component {
               <h1>test</h1>
             </GridColumn>
           </Grid>
-        </footer>*/}
-
-        <header className={ `page-header ${this.state.menuOpen ? 'menu-opened' : 'menu-closed'}` }>
-
-        </header>
+        </footer>
       </div>
     );
   }
