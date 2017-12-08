@@ -3,7 +3,7 @@ import {
 } from '../constants/index';
 
 const initialState = {
-  name: 'Name 1'
+  isAuth: false
 };
 
 export default function app(state = initialState, action) {

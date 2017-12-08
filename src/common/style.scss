@@ -15,6 +15,11 @@ html {
   }
 }
 
+body {
+  position: relative;
+  min-height: 100%;
+}
+
 header.page-header {
   background-color: $header-color;
   color: #fff;
@@ -118,6 +123,24 @@ header.page-header.menu-opened {
   .page-header__nav {
     ul {
       display: block;
+    }
+  }
+}
+
+footer.page-footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 41px;
+  margin-top: 2rem;
+  padding-top: 0.5rem;
+  border-top: 0.0625rem solid #ced1c9;
+  text-align: center;
+
+  @media (max-width: 767px) {
+    .button {
+      font-size: 16px;
     }
   }
 }
