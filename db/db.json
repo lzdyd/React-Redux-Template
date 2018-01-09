@@ -1,0 +1,32 @@
+{
+  "articles": [
+    {
+      "id": 1,
+      "image": "https://react.semantic-ui.com/assets/images/avatar/large/matthew.png",
+      "author": "Author 1",
+      "joined": "Joined in 2014",
+      "description": "Small description about the article"
+    },
+    {
+      "id": 2,
+      "image": "https://react.semantic-ui.com/assets/images/avatar/large/elliot.jpg",
+      "author": "Author 2",
+      "joined": "Joined in 2015",
+      "description": "Another small description about the article"
+    },
+    {
+      "id": 3,
+      "image": "https://react.semantic-ui.com/assets/images/avatar/large/daniel.jpg",
+      "author": "Author 3",
+      "joined": "Joined in 2016",
+      "description": "And another small description about the article"
+    },
+    {
+      "id": 4,
+      "image": "https://react.semantic-ui.com/assets/images/avatar/large/matthew.png",
+      "author": "Author 4",
+      "joined": "Joined in 2014",
+      "description": "Small description about the article"
+    }
+  ]
+}

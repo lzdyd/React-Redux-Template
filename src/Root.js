@@ -1,16 +1,20 @@
 import React, { Component } from 'react';
 import { Provider } from 'react-redux';
-
-import Layout from './Layout';
-import Header from './containers/Header';
-import Footer from './components/Footer';
-import RootPage from './components/RootPage';
-import App from './containers/App';
+import { Route, Switch } from 'react-router';
+import createHistory from 'history/createBrowserHistory';
+import { ConnectedRouter, routerMiddleware, push } from 'react-router-redux';
 
 import configureStore from './store/configureStore';
 
 import 'semantic-ui-css/semantic.min.css';
 import './common/style.scss';
+
+import Header from './containers/Header';
+import RootPage from './components/RootPage/RootPage';
+import Articles from './containers/Articles';
+import NotFound from './components/NotFound/index';
+
+const history = createHistory();
 
 const store = configureStore();
 
@@ -18,13 +22,18 @@ export default class Root extends Component {
   render() {
     return (
       <Provider store={ store }>
-        <div>
-          <Header />
+        <ConnectedRouter history={ history }>
+          <div>
+            <Header />
 
-          <RootPage/>
+            <Switch>
+              <Route exact path="/" component={ RootPage } />
+              <Route path="/articles" component={ Articles } />
+              <Route path="*" component={ NotFound } />
+            </Switch>
 
-          <Footer/>
-        </div>
+          </div>
+        </ConnectedRouter>
       </Provider>
     );
   }

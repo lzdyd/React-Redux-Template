@@ -28,7 +28,7 @@ const RootPage = () => {
           <Message>
             <Message.Header style={{ color: 'red' }}>TODO List:</Message.Header>
             <Message.List>
-              <Message.Item>Routing<Icon name="remove"/></Message.Item>
+              <Message.Item>Routing<Icon name="checkmark"/></Message.Item>
               <Message.Item>Optimize prod. bundle<Icon name="remove"/></Message.Item>
               <Message.Item>Lazy load<Icon name="remove"/></Message.Item>
               <Message.Item>Authentication<Icon name="remove"/></Message.Item>

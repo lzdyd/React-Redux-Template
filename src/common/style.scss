@@ -22,9 +22,12 @@ body {
 
 header.page-header {
   background-color: $header-color;
-  color: #fff;
 
   .page-header__logo {
+    @include links(#fff);
+  }
+
+  .page-header__logo-icon {
     font-size: 3rem;
     line-height: 1;
   }
