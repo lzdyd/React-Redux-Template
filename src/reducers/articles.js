@@ -9,6 +9,9 @@ const initialState = {
   fetching: false
 };
 
+// После GET_ATRICLES_SUCCESS сохраняем все статьи в articlesAll. В articles закидываем только 10 первых статей
+// При скролле до конца страницы вызывать action, который будет обновлять articles, добавляя в него ещё 10 статей
+
 export default function articles(state = initialState, action) {
   switch (action.type) {
     case GET_ATRICLES_REQUEST:
@@ -21,6 +24,6 @@ export default function articles(state = initialState, action) {
       return { ...state, fetching: false };
 
     default:
-      return { ...state };
+      return state;
   }
 }
