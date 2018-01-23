@@ -12,6 +12,7 @@ class Articles extends Component {
   }
 
   render() {
+    console.log(this.props);
     const { fetching, articles } = this.props.articles;
 
     return (

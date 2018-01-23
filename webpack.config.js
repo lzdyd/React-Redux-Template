@@ -39,6 +39,12 @@ module.exports = {
 
   devtool: 'cheap-inline-module-source-map',
 
+  stats: {
+    colors: true,
+    reasons: true,
+    chunks: true
+  },
+
   plugins: [
     new webpack.HotModuleReplacementPlugin(),
     new webpack.NamedModulesPlugin(),

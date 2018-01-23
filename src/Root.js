@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import { Provider } from 'react-redux';
 import { Route, Switch } from 'react-router';
 import createHistory from 'history/createBrowserHistory';
@@ -28,7 +28,7 @@ export default class Root extends Component {
 
             <Switch>
               <Route exact path="/" component={ RootPage } />
-              <Route path="/articles" component={ Articles } />
+              <Route path="/articles" component={props => <Articles {...props} /> } />
               <Route path="*" component={ NotFound } />
             </Switch>
 
